@@ -1,0 +1,122 @@
+body {
+    margin: 0%;
+}
+
+/* Stil für die Platzhalter */
+.placeholder {
+  position: absolute;
+  transition: transform 0.3s ease; /* Übergangseffekt für Skalierung */
+}
+.placeholder-image {
+  width: 100px; /* Passen Sie die Größe des Bildes nach Bedarf an */
+  height: 100px; /* Passen Sie die Größe des Bildes nach Bedarf an */
+  background-size: cover;
+  background-position: center;
+}
+.placeholder-text {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: white;
+  text-align: center;
+  position: absolute;
+  bottom: 5px; /* Passen Sie den Abstand nach Bedarf an */
+  left: 0;
+  right: 0;
+}
+/* Stil für den Header */
+header {
+    font-size: 30pt;
+    font-family: sans-serif;
+    background-color: #eaeaea;
+    color: #ff4d00;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    position: fixed;
+    align-items: baseline;
+    width: 98%;
+    margin-top: 0;
+  }
+
+a {
+  color: white;
+  text-decoration: none;
+}
+/* Stil für den Button-Container */
+.button-container {
+    position: fixed;
+    bottom: 30px; /* Abstand zum unteren Bildschirmrand */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+
+  /* Stil für den Text-Button */
+  .text-button {
+    font-size: 24px;
+    font-weight: bolder;
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none; /* Entfernt die Standard-Umrandung */
+    text-decoration: none; /* Entfernt die Standard-Unterstreichung */
+    color: black; /* Ändert die Farbe des Textes */
+    font-family: sans-serif;
+  }
+
+/* Skalierungseffekt beim Überfahren mit der Maus */
+.placeholder:hover {
+  transform: scale(1.9); /* Skaliere den Platzhalter um 10% beim Überfahren mit der Maus */
+}
+
+/* Stile für den Container */
+.container {
+    display: flex;
+    padding-top: 3px;
+    position: fixed;
+    top: 75px; /* Position unter dem Header */
+    width: 100%; /* Vollständige Breite des Bildschirms */
+    height: calc(100vh - 75px); /* 100% der verbleibenden Höhe nach Abzug des Headers */
+    overflow: hidden; /* Verstecke überlaufende Platzhalter */
+}
+
+/* Stile für den Suchfeld */
+#search-field {
+    color: #ff4d00;
+    width: 655px; /* Ändere die Breite nach Bedarf */
+    height: 30px;
+    border-style: none;
+    border-radius: 0px;
+    font-size: 20px;
+    transition: 200ms;
+}
+
+/* Stile für Hover-Effekt */
+#search-field:hover {
+    width: 1250px; /* Breite bei Hover */
+    transition: 200ms;
+}
+
+/* Stile für Klickeffekt */
+#search-field:focus {
+    width: 1250px; /* Breite bei Klick */
+}
+
+/* Stile für den Link "Konto" */
+a {
+    text-decoration: none; /* Entfernt die Standard-Unterstreichung */
+    color: #ff4d00; /* Farbe des Links */
+    padding: 2px 3px; /* Padding für den Link */
+    background-color: transparent; /* Hintergrundfarbe transparent */
+    border: 2px solid #ff4d00; /* Randstil */
+    border-radius: 0%; /* Abgerundete Ecken */
+    transition: all 0.3s ease; /* Übergangseffekt */
+    font-size: 20px;
+}
+
+/* Hover-Effekt für den Link "Konto" */
+a:hover {
+    background-color: #ff4d00; /* Ändert die Hintergrundfarbe beim Hover */
+    color: white; /* Ändert die Textfarbe beim Hover */
+}

@@ -1,0 +1,223 @@
+/* Allgemeine Stile für den gesamten Body */
+body {
+    margin: 0;
+    font-family: sans-serif;
+    overflow-y: hidden;
+    /*width: 400px;*/
+}
+
+/* Stile für den Header */
+header {
+    font-size: 30pt;
+    font-family: sans-serif;
+    background-color: #eaeaea;
+    color: #ff4d00;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    position: fixed;
+    align-items: baseline;
+    width: 98%;
+    margin-top: 0;
+}
+
+/* Stile für den Container */
+.container {
+    display: flex;
+    padding-top: 3px;
+    position: fixed;
+    top: 75px; /* Position unter dem Header */
+    width: 100%; /* Vollständige Breite des Bildschirms */
+    height: calc(100vh - 75px); /* 100% der verbleibenden Höhe nach Abzug des Headers */
+    overflow: hidden; /* Verstecke überlaufende Platzhalter */
+}
+
+/* Stile für den Suchfeld */
+#search-field {
+    color: #ff4d00;
+    width: 655px; /* Ändere die Breite nach Bedarf */
+    height: 30px;
+    border-style: none;
+    border-radius: 0px;
+    font-size: 20px;
+    transition: 200ms;
+}
+
+/* Stile für Hover-Effekt */
+#search-field:hover {
+    width: 1250px; /* Breite bei Hover */
+    transition: 200ms;
+}
+
+/* Stile für Klickeffekt */
+#search-field:focus {
+    width: 1250px; /* Breite bei Klick */
+}
+
+/* Stile für den Link "Konto" */
+a {
+    text-decoration: none; /* Entfernt die Standard-Unterstreichung */
+    color: #ff4d00; /* Farbe des Links */
+    padding: 2px 3px; /* Padding für den Link */
+    background-color: transparent; /* Hintergrundfarbe transparent */
+    border: 2px solid #ff4d00; /* Randstil */
+    border-radius: 0%; /* Abgerundete Ecken */
+    transition: all 0.3s ease; /* Übergangseffekt */
+    font-size: 20px;
+}
+
+/* Hover-Effekt für den Link "Konto" */
+a:hover {
+    background-color: #ff4d00; /* Ändert die Hintergrundfarbe beim Hover */
+    color: white; /* Ändert die Textfarbe beim Hover */
+}
+
+/* Stile für die scrollbare Box */
+.scrollable-box {
+    width: 50%;
+    height: 84vh;
+    overflow: auto;
+    margin: 0;
+    padding-left: 5px;
+    background-color: #eaeaea;
+    text-align: left;
+}
+
+/* Stile für Textelemente innerhalb der Box */
+.scrollable-box h1,
+.scrollable-box h2,
+.scrollable-box h3,
+.scrollable-box p,
+.scrollable-box p1 {
+    max-width: 500px;
+    min-width: 400px;
+    max-width: 600px;
+    
+}
+
+h1{
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+/* Stile für die Ausgabefeld */
+.output-field {
+    width: 50%;
+    padding-left: 5px;
+    margin-top: -20px;
+}
+
+/* Stile für Textabschnitte */
+p {
+    padding-left: 70px;
+    max-width: 400px;
+    line-height: 150%;
+
+}
+
+h2{
+    padding-left: 70px;
+    max-width: 400px;
+}
+/* Stile für Überschriften */
+h3 {
+    font-size: 16px;
+    color: #ff4d00;
+    font-weight: 300;
+    line-height: 150%;
+    padding-left: 70px;
+    max-width: 400px;
+}
+
+/* Stile für den Banner */
+.banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 48.7%;
+    background-color: #ff4d00;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    border-top: 1px solid #fff;
+    
+}
+
+/* Stile für das Textfeld */
+textarea {
+    width: 400px;
+}
+
+/* Stile für Material Icon Button */
+.material-icon-button {
+    background-color: #ff4d00;
+    color: #000;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: relative; /* Damit das Tooltips relativ zu den Buttons positioniert wird */
+}
+
+/* Stile für ausgewählten Material Icon Button */
+.material-icon-button.selected {
+    background-color: #ff4d00;
+    color: white;
+}
+
+/* Stile für das C-Icon */
+.material-icons.material-icon-button i {
+    font-weight: bolder;
+    font-size: 24px; /* Ändern Sie die Schriftgröße nach Bedarf */
+}
+
+/* Stile für den Tooltip */
+.tooltip {
+    visibility: hidden; /* Standardmäßig verstecken */
+    width:fit-content;
+    background-color:#ff4d00;
+    color: white;
+    text-align: center;
+    border-radius: 0px;
+    padding: 5px;
+    position: absolute; /* Absolute Positionierung relativ zum Button */
+    z-index: 1; /* Stellen Sie sicher, dass das Tooltip über anderen Inhalten liegt */
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px; /* Zentrieren Sie das Tooltip horizontal */
+    font-size: 14px; /* Ändern Sie die Schriftgröße nach Bedarf */
+}
+
+
+.material-icon-button:hover .tooltip {
+    visibility: visible; /* Zeigen Sie das Tooltip an, wenn der Button gehovered wird */
+}
+
+/* Neue CSS-Regel für den Buchstaben innerhalb des Buttons */
+.material-icon-button span {
+    display: inline-block; /* Ändern Sie die Anzeige des span-Elements auf inline-block */
+}
+
+/*Button link zwischen landignpage und auswahlmenue*/
+.button-container {
+    position: fixed;
+    bottom: 30px; /* Abstand zum unteren Bildschirmrand */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+
+  /* Stil für den Text-Button */
+  .text-button {
+    font-size: 24px;
+    font-weight: bolder;
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none; /* Entfernt die Standard-Umrandung */
+    text-decoration: none; /* Entfernt die Standard-Unterstreichung */
+    color: black; /* Ändert die Farbe des Textes */
+  }
